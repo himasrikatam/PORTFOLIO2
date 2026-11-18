@@ -1,106 +1,122 @@
-# Himasri Reddy Katamareddy — Portfolio
+# Himasri Reddy Katamareddy | Portfolio
 
-A minimal, warm, and editorial personal portfolio website for **Himasri Reddy Katamareddy**, Software Engineer specializing in **Agentic AI**, multi-agent workflows, and enterprise hybrid RAG pipelines based in Hyderabad, India.
+A minimal personal portfolio built with React, Vite, TypeScript, Tailwind CSS and GSAP. The design uses a light beige and blush pink palette with editorial typography and classic scroll animations.
 
-## Tech Stack & Architecture
+## Features
 
-- **Core**: React 18, Vite, TypeScript
-- **Styling**: Tailwind CSS with custom editorial design tokens (warm light beige `#F6F0E8`, alternate section `#EFE6DA`, blush pink accent `#E8B7B7` / `#F5DCDA`, and warm charcoal `#2E2826`)
-- **Animation**: GSAP 3 with ScrollTrigger and `@gsap/react` `useGSAP` for clean declarative lifecycle and cleanup
-- **Smooth Scroll**: Lenis smooth scrolling synchronized with ScrollTrigger via `gsap.ticker`
-- **Typography**: Fraunces (warm editorial serif for display headings) and DM Sans (clean high-legibility body)
-- **Accessibility**: Automatic detection and support for `prefers-reduced-motion`, visible focus rings, ARIA roles, and high color contrast
-- **Single Source of Truth**: All portfolio content is centralized and typed in `src/data/content.ts`
+- Single-page layout: Hero, About, Experience, Projects, Skills, Certifications, Contact
+- Classic GSAP animations: staggered hero reveal, ScrollTrigger section reveals, animated heading underlines, card parallax and hover lift
+- Smooth scrolling with Lenis (optional) and active-section nav highlighting
+- Custom blush cursor on desktop
+- Fully responsive with a mobile menu
+- Respects `prefers-reduced-motion` by disabling animations
+- All content lives in one typed file for easy editing
 
----
+## Tech Stack
 
-## Getting Started Locally
+| Area | Tools |
+| :--- | :--- |
+| Framework | React, Vite, TypeScript |
+| Styling | Tailwind CSS |
+| Animation | GSAP, ScrollTrigger, @gsap/react |
+| Smooth scroll | Lenis (optional) |
+| Deployment | Vercel or Netlify |
+
+## Getting Started
 
 ### Prerequisites
-- Node.js (v18 or higher recommended)
-- npm or pnpm
 
-### Installation
+- Node.js 18 or later
+- npm (or pnpm / yarn)
+
+### Install and run
 
 ```bash
-# Clone the repository
-git clone <your-repo-url>
-cd PORTFOLIO
-
-# Install dependencies
+git clone https://github.com/himasrikatam/<your-portfolio-repo>.git
+cd <your-portfolio-repo>
 npm install
-```
-
-### Development Server
-
-```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+The site runs at `http://localhost:5173`.
 
-### Production Build
+### Build for production
 
 ```bash
 npm run build
-```
-
-The optimized static production assets will be generated in the `dist/` directory.
-
-### Preview Production Build
-
-```bash
 npm run preview
 ```
 
----
+## Project Structure
 
-## Deployment Instructions
-
-### Deploy to Vercel
-1. Push your repository to GitHub or GitLab.
-2. Go to [vercel.com](https://vercel.com) and click **"Add New Project"**.
-3. Import your repository.
-4. Framework Preset: **Vite**
-5. Build Command: `npm run build`
-6. Output Directory: `dist`
-7. Click **Deploy**.
-
-Alternatively, via Vercel CLI:
-```bash
-npx vercel
+```
+src/
+  components/     Reusable UI pieces (nav, cursor, cards, tags)
+  sections/       Page sections (Hero, About, Experience, Projects, ...)
+  data/
+    content.ts    All text, links and project data
+  hooks/          Custom hooks (smooth scroll, reduced motion)
+  styles/         Global styles and design tokens
+public/
+  resume.pdf      Add your resume here
 ```
 
-### Deploy to Netlify
-1. Go to [netlify.com](https://netlify.com) and click **"Add new site"** &rarr; **"Import an existing project"**.
-2. Link your Git repository.
-3. Build Settings:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-4. Click **Deploy site**.
+## Customizing
 
-Alternatively, via Netlify CLI:
-```bash
-npx netlify deploy --prod
-```
+### Content
 
----
+Edit `src/data/content.ts` to change your bio, experience, projects, skills and links. No component changes are needed for text updates.
 
-## Customizing Your Content
+### Colors
 
-All data shown on the site is managed in:
-`src/data/content.ts`
+Design tokens are defined as CSS variables in `src/styles`:
 
-- **Personal Info & Headline**: Edit `content.personal`
-- **Work Experience**: Edit `content.experiences`
-- **Projects**: Edit `content.projects` (add/remove metrics, highlights, architecture items, tags)
-- **Skills**: Edit `content.skillGroups`
-- **Certifications & Awards**: Edit `content.certifications` (includes `title`, `issuer`, `year`, `description`, and clickable verification `url`)
-- **Resume File**: Replace the placeholder at `public/resume.pdf` with your real resume PDF.
+| Token | Value | Use |
+| :--- | :--- | :--- |
+| Background | `#F6F0E8` | Main page background |
+| Alt background | `#EFE6DA` | Alternate sections |
+| Blush accent | `#E8B7B7` | Accents, underlines, cursor |
+| Blush tint | `#F5DCDA` | Cards, tags, hover states |
+| Heading text | `#2E2826` | Headings |
+| Body text | `#6B605B` | Paragraphs |
 
----
+### Fonts
 
-## License
+Display headings use a serif (Fraunces or Cormorant Garamond) and body text uses Inter or DM Sans. Swap them in the global stylesheet and Tailwind config.
 
-MIT © Himasri Reddy Katamareddy
+### Resume
 
+Place your resume at `public/resume.pdf`. The "Download resume" button links to `/resume.pdf`.
+
+## Deployment
+
+### Vercel
+
+1. Push the repo to GitHub.
+2. Import the project at [vercel.com/new](https://vercel.com/new).
+3. Use the Vite preset (build command `npm run build`, output directory `dist`).
+
+### Netlify
+
+1. Push the repo to GitHub.
+2. Create a new site from Git in Netlify.
+3. Set build command `npm run build` and publish directory `dist`.
+
+## Accessibility and Performance
+
+- Semantic HTML, alt text and visible focus states
+- AA color contrast for text
+- Animations disabled for users who prefer reduced motion
+- Page title, meta description and Open Graph tags included
+- GSAP imports are tree-shaken and heavy assets are lazy-loaded
+
+## Notes
+
+- Client project details are described at a high level. Do not add confidential data, internal URLs or credentials to `content.ts`.
+- The phone number is intentionally left off the public site.
+
+## Contact
+
+- Email: himasrikatam@gmail.com
+- LinkedIn: [himasri-r-9aa507243](https://www.linkedin.com/in/himasri-r-9aa507243/)
+- GitHub: [himasrikatam](https://github.com/himasrikatam)
