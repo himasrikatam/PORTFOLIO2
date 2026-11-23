@@ -368,7 +368,7 @@ def build_pdf(filename):
     story.append(Paragraph(f'&bull; <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/PUXS3BR79Y9A" color="{link_color}"><b><u>IBM RAG and Agentic AI Professional Certification</u></b></a>', bullet_style))
     story.append(Paragraph(f'&bull; <a href="https://www.credly.com/badges/3dea202d-2f0f-44ab-ad9a-6ab66ccbfe3a/whatsapp" color="{link_color}"><b><u>IBM-SkillsBuild Artificial Intelligence Fundamentals</u></b></a>', bullet_style))
     sih_text = (
-        f'&bull; <a href="https://www.sih.gov.in/" color="{link_color}"><b><u>INTERNAL SMART INDIA HACKATHON 2024 | Winners of ICFAI TECH\'s internal Smart India Hackathon</u></b></a><br/>'
+        f'&bull; <a href=https://lnkd.in/p/dQKBQcqT" color="{link_color}"><b><u>INTERNAL SMART INDIA HACKATHON 2024 | Winners of ICFAI TECH\'s internal Smart India Hackathon</u></b></a><br/>'
         "&nbsp;&nbsp;Developed a two-level AI-driven solution for problem statement 1711 - RailMadad, optimizing railway complaint "
         "resolution and significantly reducing manpower requirements. Contributed to developing a chatbot, interactive webpage, and an ML model for prioritizing complaints."
     )

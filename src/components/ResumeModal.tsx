@@ -365,7 +365,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                   </a>
                 </li>
                 <li>
-                  &bull; <a href="https://www.sih.gov.in/" target="_blank" rel="noopener noreferrer" className="font-bold text-black hover:text-blue-700 underline inline-flex items-center gap-1">
+                  &bull; <a href="https://lnkd.in/p/dQKBQcqT" target="_blank" rel="noopener noreferrer" className="font-bold text-black hover:text-blue-700 underline inline-flex items-center gap-1">
                     INTERNAL SMART INDIA HACKATHON 2024 | Winners of ICFAI TECH’s internal Smart India Hackathon
                     <ExternalLink className="w-3 h-3 text-gray-500 inline" />
                   </a><br />

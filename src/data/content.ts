@@ -646,7 +646,7 @@ export const content: PortfolioContent = {
       type: "achievement",
       year: "2024",
       highlight: "1st Place Winner",
-      url: "https://www.sih.gov.in/",
+      url: "https://lnkd.in/p/dQKBQcqT",
       description: "Developed a two-level AI-driven solution for problem statement 1711 - RailMadad, optimizing railway complaint resolution and significantly reducing manpower requirements. Contributed to developing a chatbot, interactive webpage, and an ML model for prioritizing complaints."
     }
   ]
